@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.9.RELEASE</version>
+        <relativePath />
+    </parent>
+    
+    <groupId>io.github.hexagonframework</groupId>
+    <artifactId>hexagonal-architecture-demo</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+
+    <modules>
+        <module>hexagonal-architecture-demo-domain</module>
+        <module>hexagonal-architecture-demo-adapter</module>
+        <module>hexagonal-architecture-demo-application</module>
+        <module>hexagonal-architecture-demo-main</module>
+    </modules>
+
+    <properties>
+        <project.version>1.0-SNAPSHOT</project.version>
+        <java.version>1.8</java.version>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>io.github.hexagonframework</groupId>
+                <artifactId>hexagonal-architecture-demo-domain</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.hexagonframework</groupId>
+                <artifactId>hexagonal-architecture-demo-application</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.hexagonframework</groupId>
+                <artifactId>hexagonal-architecture-demo-adapter-rest-service</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.hexagonframework</groupId>
+                <artifactId>hexagonal-architecture-demo-adapter-rest-client</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.hexagonframework</groupId>
+                <artifactId>hexagonal-architecture-demo-adapter-dubbo-api</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.hexagonframework</groupId>
+                <artifactId>hexagonal-architecture-demo-adapter-dubbo-service</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.hexagonframework</groupId>
+                <artifactId>hexagonal-architecture-demo-adapter-sql</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.hexagonframework</groupId>
+                <artifactId>hexagonal-architecture-demo-main</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>
