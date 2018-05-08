@@ -3,20 +3,17 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>hexagonal-architecture-demo</artifactId>
+        <artifactId>hexagonal-architecture-demo-adapter</artifactId>
         <groupId>io.github.hexagonframework</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>hexagonal-architecture-demo-adapter</artifactId>
+    <artifactId>hexagonal-architecture-demo-adapter-dubbo</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>hexagonal-architecture-demo-adapter-rest</module>
-        <module>hexagonal-architecture-demo-adapter-dubbo</module>
-        <module>hexagonal-architecture-demo-adapter-sql</module>
-        <module>hexagonal-architecture-demo-adapter-query</module>
+        <module>hexagonal-architecture-demo-adapter-query-es</module>
+        <module>hexagonal-architecture-demo-adapter-query-sql</module>
     </modules>
-
 
 </project>

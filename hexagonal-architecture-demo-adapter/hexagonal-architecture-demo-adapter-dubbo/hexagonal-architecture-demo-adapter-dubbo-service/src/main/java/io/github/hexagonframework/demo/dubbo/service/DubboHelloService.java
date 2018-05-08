@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 
 @Service(interfaceClass = HelloService.class)
 @Component
-public class DubboUserService implements HelloService {
+public class DubboHelloService implements HelloService {
     public String say(String words) {
         return "Hello " + words;
     }
