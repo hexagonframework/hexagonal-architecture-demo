@@ -4,3 +4,44 @@ spring:
   dubbo:
     server: true
     registry: N/A
+
+mybatis:
+  mapper-locations: classpath*:/META-INF/mappers/*Mapper.xml
+
+sharding:
+  jdbc:
+    datasource:
+      names: ds_0,ds_1
+      ds_0:
+        type: com.alibaba.druid.pool.DruidDataSource
+        driver-class-name: com.mysql.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/demo_ds_0
+        username: root
+        password: root1@3$
+      ds_1:
+        type: com.alibaba.druid.pool.DruidDataSource
+        driver-class-name: com.mysql.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/demo_ds_1
+        username: root
+        password: root1@3$
+    config:
+      sharding:
+        default-database-strategy:
+          inline:
+            sharding-column: user_id
+            algorithm-expression: ds_${user_id % 2}
+        tables:
+          t_order:
+            actual-data-nodes: ds_${0..1}.t_order_${0..1}
+            table-strategy:
+              inline:
+                sharding-column: order_id
+                algorithm-expression: t_order_${order_id % 2}
+                key-generator-column-name: order_id
+          t_order_item:
+            actual-data-nodes: ds_${0..1}.t_order_item_${0..1}
+            table-strategy:
+              inline:
+                sharding-column: order_id
+                algorithm-expression: t_order_item_${order_id % 2}
+                key-generator-column-name: order_item_id
