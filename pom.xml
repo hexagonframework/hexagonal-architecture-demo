@@ -78,7 +78,7 @@
             </dependency>
             <dependency>
                 <groupId>io.github.hexagonframework</groupId>
-                <artifactId>hexagonal-architecture-demo-adapter-sql</artifactId>
+                <artifactId>hexagonal-architecture-demo-adapter-mybatis</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>

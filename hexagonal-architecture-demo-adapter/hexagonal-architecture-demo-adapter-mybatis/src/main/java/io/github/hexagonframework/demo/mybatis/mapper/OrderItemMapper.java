@@ -1,4 +1,4 @@
-package io.github.hexagonframework.demo.sql.mapper;
+package io.github.hexagonframework.demo.mybatis.mapper;
 
 import io.github.hexagonframework.demo.domain.model.OrderItem;
 import org.apache.ibatis.annotations.Mapper;

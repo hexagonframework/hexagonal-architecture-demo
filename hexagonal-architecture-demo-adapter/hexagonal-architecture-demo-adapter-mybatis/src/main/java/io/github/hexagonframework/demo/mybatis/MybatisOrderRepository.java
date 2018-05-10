@@ -1,10 +1,10 @@
-package io.github.hexagonframework.demo.sql;
+package io.github.hexagonframework.demo.mybatis;
 
 import io.github.hexagonframework.demo.domain.model.Order;
 import io.github.hexagonframework.demo.domain.model.OrderItem;
 import io.github.hexagonframework.demo.domain.repository.OrderRepository;
-import io.github.hexagonframework.demo.sql.mapper.OrderItemMapper;
-import io.github.hexagonframework.demo.sql.mapper.OrderMapper;
+import io.github.hexagonframework.demo.mybatis.mapper.OrderItemMapper;
+import io.github.hexagonframework.demo.mybatis.mapper.OrderMapper;
 import org.springframework.stereotype.Repository;
 import org.springframework.util.Assert;
 

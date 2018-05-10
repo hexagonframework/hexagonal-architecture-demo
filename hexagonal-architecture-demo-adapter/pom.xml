@@ -14,8 +14,7 @@
     <modules>
         <module>hexagonal-architecture-demo-adapter-rest</module>
         <module>hexagonal-architecture-demo-adapter-dubbo</module>
-        <module>hexagonal-architecture-demo-adapter-sql</module>
-        <module>hexagonal-architecture-demo-adapter-query</module>
+        <module>hexagonal-architecture-demo-adapter-mybatis</module>
     </modules>
 
 

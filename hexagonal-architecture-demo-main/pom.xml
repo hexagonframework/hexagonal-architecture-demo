@@ -20,6 +20,10 @@
             <groupId>io.github.hexagonframework</groupId>
             <artifactId>hexagonal-architecture-demo-adapter-rest-service</artifactId>
         </dependency>
+        <dependency>
+            <groupId>io.github.hexagonframework</groupId>
+            <artifactId>hexagonal-architecture-demo-adapter-mybatis</artifactId>
+        </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -36,10 +40,6 @@
         <dependency>
             <groupId>io.shardingjdbc</groupId>
             <artifactId>sharding-jdbc-core-spring-boot-starter</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>io.github.hexagonframework</groupId>
-            <artifactId>hexagonal-architecture-demo-adapter-sql</artifactId>
         </dependency>
     </dependencies>
 

@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>hexagonal-architecture-demo-adapter-sql</artifactId>
+    <artifactId>hexagonal-architecture-demo-adapter-mybatis</artifactId>
 
     <dependencies>
         <dependency>
