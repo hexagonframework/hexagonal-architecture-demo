@@ -7,5 +7,4 @@ import java.util.List;
 @Value
 public class PlaceOrderCommand {
     private int userId;
-    private List<String> orderItems;
 }

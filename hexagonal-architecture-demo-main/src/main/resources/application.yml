@@ -26,10 +26,13 @@ sharding:
         password: root1@3$
     config:
       sharding:
+        # 默认数据库分片策略
         default-database-strategy:
           inline:
             sharding-column: user_id
             algorithm-expression: ds_${user_id % 2}
+        default-key-generator-class: io.shardingjdbc.core.keygen.DefaultKeyGenerator
+
         tables:
           t_order:
             actual-data-nodes: ds_${0..1}.t_order_${0..1}
@@ -37,11 +40,17 @@ sharding:
               inline:
                 sharding-column: order_id
                 algorithm-expression: t_order_${order_id % 2}
-                key-generator-column-name: order_id
+            key-generator-column-name: order_id
           t_order_item:
             actual-data-nodes: ds_${0..1}.t_order_item_${0..1}
             table-strategy:
               inline:
                 sharding-column: order_id
                 algorithm-expression: t_order_item_${order_id % 2}
-                key-generator-column-name: order_item_id
+            key-generator-column-name: order_item_id
+
+        bindingTables:
+            - t_order,t_order_item
+
+        props:
+            sql.show: true

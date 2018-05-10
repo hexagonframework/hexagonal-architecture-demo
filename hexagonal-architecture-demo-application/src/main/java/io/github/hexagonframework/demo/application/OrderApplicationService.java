@@ -21,7 +21,7 @@ public class OrderApplicationService {
     public Long placeOrder(PlaceOrderCommand placeOrderCommand) {
         Order order = Order.builder()
                 .userId(placeOrderCommand.getUserId())
-                .status("New")
+                .status("INIT")
                 .build();
         orderRepository.save(order);
         return order.getOrderId();
